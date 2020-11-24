@@ -5,7 +5,8 @@ import (
 	"os"
 )
 
-func copyFile(src string, dest string) (err error) {
+// CopyFile copies file
+func CopyFile(src string, dest string) (err error) {
 	input, err := ioutil.ReadFile(src)
 	if err != nil {
 		return err
@@ -19,7 +20,8 @@ func copyFile(src string, dest string) (err error) {
 	return nil
 }
 
-func fileSize(name string) (s int64, err error) {
+// FileSize returns the file size
+func FileSize(name string) (s int64, err error) {
 	f, err := os.Open(name)
 	if err != nil {
 		return s, err

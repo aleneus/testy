@@ -7,7 +7,7 @@ import (
 
 func Test_copyFile(t *testing.T) {
 	t.Run("existing file", func(t *testing.T) {
-		err := copyFile("testdata/file.txt", "testdata/tmp.txt")
+		err := CopyFile("testdata/file.txt", "testdata/tmp.txt")
 		if err != nil {
 			t.Error("Can not copy file")
 		}
@@ -19,7 +19,7 @@ func Test_copyFile(t *testing.T) {
 	})
 
 	t.Run("not existing file", func(t *testing.T) {
-		err := copyFile("testdata/unknown.txt", "testdata/tmp.txt")
+		err := CopyFile("testdata/unknown.txt", "testdata/tmp.txt")
 		if err == nil {
 			t.Error("No error")
 		}
@@ -28,7 +28,7 @@ func Test_copyFile(t *testing.T) {
 
 func Test_fileSize(t *testing.T) {
 	t.Run("existing", func(t *testing.T) {
-		s, err := fileSize("testdata/file.txt")
+		s, err := FileSize("testdata/file.txt")
 		if err != nil {
 			t.Fatal("Can not get file size")
 		}
@@ -39,7 +39,7 @@ func Test_fileSize(t *testing.T) {
 	})
 
 	t.Run("not existing", func(t *testing.T) {
-		_, err := fileSize("testdata/unknown.txt")
+		_, err := FileSize("testdata/unknown.txt")
 		if err == nil {
 			t.Fatal("No error")
 		}

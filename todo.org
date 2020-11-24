@@ -2,6 +2,7 @@
 ** DONE feat: copy
 ** DONE feat: file size
 ** DONE docs: add changelog
+** DONE feat: make file helpers exported
 * future
 ** make
 *** test coverage
