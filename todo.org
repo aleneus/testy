@@ -1,0 +1,7 @@
+* 0.2.0
+** DONE feat: copy
+** DONE feat: file size
+** DONE docs: add changelog
+* future
+** make
+*** test coverage
