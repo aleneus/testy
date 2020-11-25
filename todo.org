@@ -3,6 +3,8 @@
 ** DONE feat: file size
 ** DONE docs: add changelog
 ** DONE feat: make file helpers exported
+* 0.2.1
+** DONE docs: README: add example
 * future
 ** make
 *** test coverage
