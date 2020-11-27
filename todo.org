@@ -5,6 +5,8 @@
 ** DONE feat: make file helpers exported
 * 0.2.1
 ** DONE docs: README: add example
+* 0.2.2
+** DONE feat: show file and line where error occurs
 * future
 ** make
 *** test coverage
