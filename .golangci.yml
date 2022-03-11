@@ -1,0 +1,16 @@
+linters:
+  enable-all: true
+
+  disable:
+    - scopelint
+    - interfacer
+    - golint
+    - maligned
+    - testpackage
+    - goerr113
+
+linters-settings:
+  govet:
+    check-shadowing: true
+
+    enable-all: true

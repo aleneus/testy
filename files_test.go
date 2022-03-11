@@ -28,13 +28,13 @@ func Test_copyFile(t *testing.T) {
 
 func Test_fileSize(t *testing.T) {
 	t.Run("existing", func(t *testing.T) {
-		s, err := FileSize("testdata/file.txt")
+		size, err := FileSize("testdata/file.txt")
 		if err != nil {
 			t.Fatal("Can not get file size")
 		}
 
-		if s != 8 {
-			t.Error(s, "!=", 8)
+		if size != 8 {
+			t.Error(size, "!=", 8)
 		}
 	})
 
