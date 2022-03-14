@@ -9,5 +9,5 @@
 ** DONE feat: show file and line where error occurs
 * 0.3.0
 ** DONE ref: lint
-** TODO make: test coverage
-** TODO feat: + Assert() (same as AssertTrue)
+** DONE make: test coverage
+** DONE feat: + Assert(), +AssertNotNil()

@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+// Assert checks that value is true.
+func Assert(t *testing.T, v bool, msg ...interface{}) {
+	t.Helper()
+
+	AssertTrue(t, v, msg)
+}
+
 // AssertTrue checks that value is true.
 func AssertTrue(t *testing.T, v bool, msg ...interface{}) {
 	t.Helper()
@@ -56,5 +63,14 @@ func AssertError(t *testing.T, err error, msg ...interface{}) {
 
 	if err == nil {
 		t.Fatal("No error", msg)
+	}
+}
+
+// AssertNotNil checks that value is not nil.
+func AssertNotNil(t *testing.T, v interface{}, msg ...interface{}) {
+	t.Helper()
+
+	if v == nil {
+		t.Fatal(v, "== <nil>", msg)
 	}
 }

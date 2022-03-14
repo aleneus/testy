@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [0.3.0]
+
+* + Assert()
+* + AssertNotNil()
+
 ## [0.2.0]
 
 * Helpers for working with files in tests
