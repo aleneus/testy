@@ -2,6 +2,7 @@
 package testy
 
 import (
+	"reflect"
 	"testing"
 )
 
@@ -71,6 +72,14 @@ func AssertNotNil(t *testing.T, v interface{}, msg ...interface{}) {
 	t.Helper()
 
 	if v == nil {
-		t.Fatal(v, "== <nil>", msg)
+		t.Fatal("is nil", msg)
+	}
+
+	if reflect.TypeOf(v).Kind() != reflect.Ptr {
+		return
+	}
+
+	if reflect.ValueOf(v).IsNil() {
+		t.Fatal("is nil", msg)
 	}
 }

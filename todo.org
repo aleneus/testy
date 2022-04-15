@@ -11,3 +11,7 @@
 ** DONE ref: lint
 ** DONE make: test coverage
 ** DONE feat: + Assert(), +AssertNotNil()
+* 0.3.1
+** DONE fix: AssertNotNil()
+* 0.4.0
+** TODO feat: AssertNotNil() -> AssertPtrNotNil()
