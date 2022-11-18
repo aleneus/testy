@@ -3,6 +3,7 @@ package testy
 
 import (
 	"reflect"
+	"strings"
 	"testing"
 )
 
@@ -98,4 +99,14 @@ func AssertPanic(t *testing.T, f func()) {
 	f()
 
 	Assert(t, havePanic)
+}
+
+// AssertSubstr asserts that first string is substring of the
+// second one.
+func AssertSubstr(t *testing.T, substr, str string) {
+	t.Helper()
+
+	if !strings.Contains(str, substr) {
+		t.Fatal("there is no", substr, "in", str)
+	}
 }

@@ -66,3 +66,9 @@ func TestAssertPanic(t *testing.T) {
 
 	AssertPanic(t, func() { f() })
 }
+
+func TestAssertSubstr(t *testing.T) {
+	t.Parallel()
+
+	AssertSubstr(t, "aa", "bbaabb")
+}
