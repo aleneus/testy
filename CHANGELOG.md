@@ -3,6 +3,7 @@
 ## [0.4]
 
 * + AssertPanic()
+* + AssertSubstr()
 
 ## [0.3]
 
