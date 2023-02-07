@@ -1,19 +1,24 @@
 # CHANGELOG
 
-## [0.4]
+## 0.5
+
+* + AssertNotSubstr()
+* - log stuff
+
+## 0.4
 
 * + AssertPanic()
 * + AssertSubstr()
 
-## [0.3]
+## 0.3
 
 * + Assert()
 * + AssertNotNil()
 
-## [0.2]
+## 0.2
 
 * Helpers for working with files in tests
 
-## [0.1]
+## 0.1
 
 * A couple of assert functions to reduce the amount of code in tests
