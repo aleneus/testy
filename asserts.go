@@ -110,3 +110,13 @@ func AssertSubstr(t *testing.T, substr, str string) {
 		t.Fatal("there is no", substr, "in", str)
 	}
 }
+
+// AssertNotSubstr asserts that first string is not substring of the
+// second one.
+func AssertNotSubstr(t *testing.T, substr, str string) {
+	t.Helper()
+
+	if strings.Contains(str, substr) {
+		t.Fatal("there is", substr, "in", str)
+	}
+}

@@ -72,3 +72,9 @@ func TestAssertSubstr(t *testing.T) {
 
 	AssertSubstr(t, "aa", "bbaabb")
 }
+
+func TestAssertNotSubstr(t *testing.T) {
+	t.Parallel()
+
+	AssertNotSubstr(t, "aaa", "bbaabb")
+}
