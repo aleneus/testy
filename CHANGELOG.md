@@ -2,6 +2,7 @@
 
 ## 0.5
 
+* + Writer
 * + AssertNotSubstr()
 * - log stuff
 
