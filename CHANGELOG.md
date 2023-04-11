@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.6
+
+* + AssertEqualFloat32
+* + AssertEqualFloat64
+* + AssertNotEqualFloat32
+* + AssertNotEqualFloat64
+
 ## 0.5
 
 * + Writer
