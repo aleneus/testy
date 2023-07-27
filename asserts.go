@@ -2,6 +2,7 @@
 package testy
 
 import (
+	"errors"
 	"reflect"
 	"strings"
 	"testing"
@@ -50,7 +51,7 @@ func AssertNotEqual(t *testing.T, v1, v2 interface{}, msg ...interface{}) {
 	}
 }
 
-// AssertNoErr check if error is not nil.
+// AssertNoErr check if error is nil.
 func AssertNoErr(t *testing.T, err error, msg ...interface{}) {
 	t.Helper()
 
@@ -59,12 +60,23 @@ func AssertNoErr(t *testing.T, err error, msg ...interface{}) {
 	}
 }
 
-// AssertError checks that error is nil.
+// AssertError checks that error is not nil.
 func AssertError(t *testing.T, err error, msg ...interface{}) {
 	t.Helper()
 
 	if err == nil {
 		t.Fatal("No error", msg)
+	}
+}
+
+// AssertError checks that error is wanted.
+func AssertErrorIs(t *testing.T, err error, target error, msg ...interface{}) {
+	if err == nil {
+		t.Fatal("No error", msg)
+	}
+
+	if !errors.Is(err, target) {
+		t.Fatal("Wrong error: ", err, msg)
 	}
 }
 

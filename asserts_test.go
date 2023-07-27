@@ -1,6 +1,7 @@
 package testy
 
 import (
+	"errors"
 	"fmt"
 	"testing"
 )
@@ -37,16 +38,23 @@ func TestAssertFalse(t *testing.T) {
 	AssertFalse(t, 1 == 2)
 }
 
+func TestAssertNoErr(t *testing.T) {
+	t.Parallel()
+
+	AssertNoErr(t, nil)
+}
+
 func TestAssertError(t *testing.T) {
 	t.Parallel()
 
 	AssertError(t, fmt.Errorf("error"))
 }
 
-func TestAssertNoErr(t *testing.T) {
+func TestAssertErrorIs(t *testing.T) {
 	t.Parallel()
 
-	AssertNoErr(t, nil)
+	errTarget := errors.New("target")
+	AssertErrorIs(t, errTarget, errTarget)
 }
 
 func TestAssertNotNil(t *testing.T) {
