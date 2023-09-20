@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.7.1
+
+* fix: floats: NaN
+
 ## 0.7
 
 * + AssertErrorIs()

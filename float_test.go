@@ -1,6 +1,9 @@
 package testy
 
-import "testing"
+import (
+	"math"
+	"testing"
+)
 
 func TestAssertEqualFloat32(t *testing.T) {
 	t.Parallel()
@@ -18,10 +21,14 @@ func TestAssertNotEqualFloat32(t *testing.T) {
 	t.Parallel()
 
 	AssertNotEqualFloat32(t, 1.2, 1.3, 0.00001)
+	AssertNotEqualFloat32(t, float32(math.NaN()), 1, 0.00001)
+	AssertNotEqualFloat32(t, float32(math.NaN()), float32(math.NaN()), 0.00001)
 }
 
 func TestAssertNotEqualFloat64(t *testing.T) {
 	t.Parallel()
 
 	AssertNotEqualFloat64(t, 1.2, 1.3, 0.00001)
+	AssertNotEqualFloat64(t, math.NaN(), 1, 0.00001)
+	AssertNotEqualFloat64(t, math.NaN(), math.NaN(), 0.00001)
 }
