@@ -71,6 +71,8 @@ func AssertError(t *testing.T, err error, msg ...interface{}) {
 
 // AssertError checks that error is wanted.
 func AssertErrorIs(t *testing.T, err error, target error, msg ...interface{}) {
+	t.Helper()
+
 	if err == nil {
 		t.Fatal("No error", msg)
 	}
