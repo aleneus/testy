@@ -3,18 +3,17 @@ package testy
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 )
 
 // CopyFile copies file.
 func CopyFile(src string, dest string) (err error) {
-	input, err := ioutil.ReadFile(src)
+	input, err := os.ReadFile(src)
 	if err != nil {
 		return fmt.Errorf("read file: %w", err)
 	}
 
-	if err = ioutil.WriteFile(dest, input, 0644); err != nil {
+	if err = os.WriteFile(dest, input, 0644); err != nil {
 		return fmt.Errorf("write file: %w", err)
 	}
 

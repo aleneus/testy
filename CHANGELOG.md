@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.8
+
+* + AssertEqualComplex()
+
 ## 0.7.1
 
 * fix: floats: NaN
