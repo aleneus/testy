@@ -1,8 +1,13 @@
 # CHANGELOG
 
+## 0.9
+
+* + `AssertRelEqualFloat32()`, `AssertRelNotEqualFloat32()` for relative comparison of float32.
+* + `AssertRelEqualFloat64()`, `AssertRelNotEqualFloat64()` for relative comparison of float64.
+
 ## 0.8
 
-* + AssertEqualComplex()
+* + `AssertEqualComplex()`
 
 ## 0.7.3
 
@@ -10,7 +15,7 @@
 
 ## 0.7.2
 
-* refactor: + t.Helper()
+* refactor: + `t.Helper()`
 
 ## 0.7.1
 
@@ -18,30 +23,30 @@
 
 ## 0.7
 
-* + AssertErrorIs()
+* + `AssertErrorIs()`
 
 ## 0.6
 
-* + AssertEqualFloat32()
-* + AssertEqualFloat64()
-* + AssertNotEqualFloat32()
-* + AssertNotEqualFloat64()
+* + `AssertEqualFloat32()`
+* + `AssertEqualFloat64()`
+* + `AssertNotEqualFloat32()`
+* + `AssertNotEqualFloat64()`
 
 ## 0.5
 
-* + Writer
-* + AssertNotSubstr()
+* + `Writer` structure
+* + `AssertNotSubstr()`
 * - log stuff
 
 ## 0.4
 
-* + AssertPanic()
-* + AssertSubstr()
+* + `AssertPanic()`
+* + `AssertSubstr()`
 
 ## 0.3
 
-* + Assert()
-* + AssertNotNil()
+* + `Assert()`
+* + `AssertNotNil()`
 
 ## 0.2
 
