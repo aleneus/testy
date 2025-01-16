@@ -1,4 +1,4 @@
-// Package testy implements some helpers for writing tests.
+// Package testy provides the assert helpers for writing unit tests.
 package testy
 
 // Writer is the very simple text writer. It can be used for testing

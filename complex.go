@@ -1,4 +1,4 @@
-// Package testy implements some helpers for writing tests.
+// Package testy provides the assert helpers for writing unit tests.
 package testy
 
 import "testing"
