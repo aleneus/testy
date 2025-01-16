@@ -11,8 +11,8 @@ func TestAssertEqualFloat32(t *testing.T) {
 	AssertEqualFloat32(t, 1.12346, 1.12345, 0.0001)
 	AssertEqualFloat32(t, 0.000000001000001, 0.000000001000002, 0.00001)
 	AssertEqualFloat32(t, 0.000000001000002, 0.000000001000001, 0.00001)
-	AssertNotEqualFloat32(t, 0.000000000001001, 0.000000000001002, 0.00001)
-	AssertNotEqualFloat32(t, 0.000000000001002, 0.000000000001001, 0.00001)
+	AssertRelNotEqualFloat32(t, 0.000000000001001, 0.000000000001002, 0.00001)
+	AssertRelNotEqualFloat32(t, 0.000000000001002, 0.000000000001001, 0.00001)
 }
 
 func TestAssertEqualFloat64(t *testing.T) {
@@ -21,8 +21,8 @@ func TestAssertEqualFloat64(t *testing.T) {
 	AssertEqualFloat64(t, 1.12346, 1.12345, 0.0001)
 	AssertEqualFloat64(t, 0.0000000010000001, 0.0000000010000002, 0.0000001)
 	AssertEqualFloat64(t, 0.0000000010000002, 0.0000000010000001, 0.0000001)
-	AssertNotEqualFloat64(t, 0.000000000001001, 0.000000000001002, 0.0000001)
-	AssertNotEqualFloat64(t, 0.000000000001002, 0.000000000001001, 0.0000001)
+	AssertRelNotEqualFloat64(t, 0.000000000001001, 0.000000000001002, 0.0000001)
+	AssertRelNotEqualFloat64(t, 0.000000000001002, 0.000000000001001, 0.0000001)
 }
 
 func TestAssertZeroFloat32(t *testing.T) {
@@ -32,13 +32,13 @@ func TestAssertZeroFloat32(t *testing.T) {
 
 	AssertEqualFloat32(t, 0.0, 1e-40, 0.1)
 	AssertEqualFloat32(t, 1e-40, 0.0, 0.1)
-	AssertNotEqualFloat32(t, 0.0, 1e-40, 0.000001)
-	AssertNotEqualFloat32(t, 1e-40, 0.0, 0.000001)
+	AssertRelNotEqualFloat32(t, 0.0, 1e-40, 0.000001)
+	AssertRelNotEqualFloat32(t, 1e-40, 0.0, 0.000001)
 
 	AssertEqualFloat32(t, 0.0, -1e-40, 0.1)
 	AssertEqualFloat32(t, -1e-40, 0.0, 0.1)
-	AssertNotEqualFloat32(t, 0.0, -1e-40, 0.000001)
-	AssertNotEqualFloat32(t, -1e-40, 0.0, 0.000001)
+	AssertEqualFloat32(t, 0.0, -1e-40, 0.000001)
+	AssertEqualFloat32(t, -1e-40, 0.0, 0.000001)
 }
 
 func TestAssertZeroFloat64(t *testing.T) {
@@ -48,13 +48,13 @@ func TestAssertZeroFloat64(t *testing.T) {
 
 	AssertEqualFloat64(t, 0.0, 1e-309, 0.1)
 	AssertEqualFloat64(t, 1e-309, 0.0, 0.1)
-	AssertNotEqualFloat64(t, 0.0, 1e-309, 0.000001)
-	AssertNotEqualFloat64(t, 1e-309, 0.0, 0.000001)
+	AssertRelNotEqualFloat64(t, 0.0, 1e-309, 0.000001)
+	AssertRelNotEqualFloat64(t, 1e-309, 0.0, 0.000001)
 
 	AssertEqualFloat64(t, 0.0, -1e-309, 0.1)
 	AssertEqualFloat64(t, -1e-309, 0.0, 0.1)
-	AssertNotEqualFloat64(t, 0.0, -1e-309, 0.000001)
-	AssertNotEqualFloat64(t, -1e-309, 0.0, 0.000001)
+	AssertEqualFloat64(t, 0.0, -1e-309, 0.000001)
+	AssertEqualFloat64(t, -1e-309, 0.0, 0.000001)
 }
 
 func TestAssertNotEqualFloat32(t *testing.T) {
