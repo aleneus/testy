@@ -2,8 +2,9 @@
 
 ## 0.9
 
-* + `AssertRelEqualFloat32()`, `AssertRelNotEqualFloat32()` for relative comparison of float32.
-* + `AssertRelEqualFloat64()`, `AssertRelNotEqualFloat64()` for relative comparison of float64.
+* + `AssertRelEqualFloat32()`, `AssertRelNotEqualFloat32()` for relative comparison of float32
+* + `AssertRelEqualFloat64()`, `AssertRelNotEqualFloat64()` for relative comparison of float64
+* fix: `...NotEqual...`: message
 
 ## 0.8
 

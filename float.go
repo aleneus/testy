@@ -20,7 +20,7 @@ func AssertNotEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...any
 	t.Helper()
 
 	if math.Abs(float64(v1)-float64(v2)) <= eps {
-		t.Fatal(v1, "!=", v2, msg)
+		t.Fatal(v1, "==", v2, msg)
 	}
 }
 
@@ -38,6 +38,6 @@ func AssertNotEqualFloat64(t *testing.T, v1, v2 float64, eps float64, msg ...any
 	t.Helper()
 
 	if math.Abs(v1-v2) <= eps {
-		t.Fatal(v1, "!=", v2, msg)
+		t.Fatal(v1, "==", v2, msg)
 	}
 }

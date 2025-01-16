@@ -20,7 +20,7 @@ func AssertNotEqual(t *testing.T, v1, v2 any, msg ...any) {
 	t.Helper()
 
 	if v1 == v2 {
-		t.Fatal("Both values are equal to", v1, msg)
+		t.Fatal(v1, "==", v2, msg)
 	}
 }
 

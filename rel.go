@@ -22,7 +22,7 @@ func AssertRelNotEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...
 	t.Helper()
 
 	if nearlyEqual(float64(v1), float64(v2), eps, float64(minNormal32), float64(math.MaxFloat32)) {
-		t.Fatal(v1, "!=", v2, msg)
+		t.Fatal(v1, "==", v2, msg)
 	}
 }
 
@@ -42,7 +42,7 @@ func AssertRelNotEqualFloat64(t *testing.T, v1, v2 float64, eps float64, msg ...
 	t.Helper()
 
 	if nearlyEqual(v1, v2, eps, minNormal64, math.MaxFloat64) {
-		t.Fatal(v1, "!=", v2, msg)
+		t.Fatal(v1, "==", v2, msg)
 	}
 }
 
