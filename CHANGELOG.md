@@ -4,6 +4,14 @@
 
 * + AssertEqualComplex()
 
+## 0.7.3
+
+* refactor: floats comparison
+
+## 0.7.2
+
+* refactor: + t.Helper()
+
 ## 0.7.1
 
 * fix: floats: NaN
