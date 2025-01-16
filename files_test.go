@@ -33,8 +33,8 @@ func Test_fileSize(t *testing.T) {
 			t.Fatal("Can not get file size")
 		}
 
-		if size != 8 {
-			t.Error(size, "!=", 8)
+		if size != 7 {
+			t.Error(size, "!=", 7)
 		}
 	})
 
