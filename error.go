@@ -7,7 +7,7 @@ import (
 )
 
 // AssertNoErr check if error is nil.
-func AssertNoErr(t *testing.T, err error, msg ...interface{}) {
+func AssertNoErr(t *testing.T, err error, msg ...any) {
 	t.Helper()
 
 	if err != nil {
@@ -16,7 +16,7 @@ func AssertNoErr(t *testing.T, err error, msg ...interface{}) {
 }
 
 // AssertError checks that error is not nil.
-func AssertError(t *testing.T, err error, msg ...interface{}) {
+func AssertError(t *testing.T, err error, msg ...any) {
 	t.Helper()
 
 	if err == nil {
@@ -25,7 +25,7 @@ func AssertError(t *testing.T, err error, msg ...interface{}) {
 }
 
 // AssertError checks that error is wanted.
-func AssertErrorIs(t *testing.T, err error, target error, msg ...interface{}) {
+func AssertErrorIs(t *testing.T, err error, target error, msg ...any) {
 	t.Helper()
 
 	if err == nil {

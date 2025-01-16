@@ -7,7 +7,7 @@ import (
 )
 
 // AssertEqual checks that two values are equal.
-func AssertEqual(t *testing.T, v1, v2 interface{}, msg ...interface{}) {
+func AssertEqual(t *testing.T, v1, v2 any, msg ...any) {
 	t.Helper()
 
 	if v1 != v2 {
@@ -16,7 +16,7 @@ func AssertEqual(t *testing.T, v1, v2 interface{}, msg ...interface{}) {
 }
 
 // AssertNotEqual checks that two values are not equal.
-func AssertNotEqual(t *testing.T, v1, v2 interface{}, msg ...interface{}) {
+func AssertNotEqual(t *testing.T, v1, v2 any, msg ...any) {
 	t.Helper()
 
 	if v1 == v2 {
@@ -25,7 +25,7 @@ func AssertNotEqual(t *testing.T, v1, v2 interface{}, msg ...interface{}) {
 }
 
 // AssertNotNil checks that value is not nil.
-func AssertNotNil(t *testing.T, v interface{}, msg ...interface{}) {
+func AssertNotNil(t *testing.T, v any, msg ...any) {
 	t.Helper()
 
 	if v == nil {

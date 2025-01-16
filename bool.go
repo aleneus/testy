@@ -4,14 +4,14 @@ package testy
 import "testing"
 
 // Assert checks that value is true.
-func Assert(t *testing.T, v bool, msg ...interface{}) {
+func Assert(t *testing.T, v bool, msg ...any) {
 	t.Helper()
 
 	AssertTrue(t, v, msg)
 }
 
 // AssertTrue checks that value is true.
-func AssertTrue(t *testing.T, v bool, msg ...interface{}) {
+func AssertTrue(t *testing.T, v bool, msg ...any) {
 	t.Helper()
 
 	if !v {
@@ -20,7 +20,7 @@ func AssertTrue(t *testing.T, v bool, msg ...interface{}) {
 }
 
 // AssertFalse checks that value is false.
-func AssertFalse(t *testing.T, v bool, msg ...interface{}) {
+func AssertFalse(t *testing.T, v bool, msg ...any) {
 	t.Helper()
 
 	if v {

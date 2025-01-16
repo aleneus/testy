@@ -9,7 +9,7 @@ import (
 )
 
 // AssertRelEqualFloat32 checks that two float32 values are equal with relative eps.
-func AssertRelEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...interface{}) {
+func AssertRelEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...any) {
 	t.Helper()
 
 	if !nearlyEqual(float64(v1), float64(v2), eps, float64(minNormal32), float64(math.MaxFloat32)) {
@@ -18,7 +18,7 @@ func AssertRelEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...int
 }
 
 // AssertRelNotEqualFloat32 checks that two float32 values are not equal with relative eps.
-func AssertRelNotEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...interface{}) {
+func AssertRelNotEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...any) {
 	t.Helper()
 
 	if nearlyEqual(float64(v1), float64(v2), eps, float64(minNormal32), float64(math.MaxFloat32)) {
@@ -29,7 +29,7 @@ func AssertRelNotEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...
 const minNormal32 = float32(0x1p-126)
 
 // AssertRelEqualFloat64 checks that two float64 values are equal with relative eps.
-func AssertRelEqualFloat64(t *testing.T, v1, v2 float64, eps float64, msg ...interface{}) {
+func AssertRelEqualFloat64(t *testing.T, v1, v2 float64, eps float64, msg ...any) {
 	t.Helper()
 
 	if !nearlyEqual(v1, v2, eps, minNormal64, math.MaxFloat64) {
@@ -38,7 +38,7 @@ func AssertRelEqualFloat64(t *testing.T, v1, v2 float64, eps float64, msg ...int
 }
 
 // AssertRelNotEqualFloat64 checks that two float64 values are not equal.
-func AssertRelNotEqualFloat64(t *testing.T, v1, v2 float64, eps float64, msg ...interface{}) {
+func AssertRelNotEqualFloat64(t *testing.T, v1, v2 float64, eps float64, msg ...any) {
 	t.Helper()
 
 	if nearlyEqual(v1, v2, eps, minNormal64, math.MaxFloat64) {
