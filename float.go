@@ -10,7 +10,7 @@ import (
 func AssertEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...any) {
 	t.Helper()
 
-	if math.Abs(float64(v1)-float64(v2)) > eps {
+	if math.IsNaN(float64(v1)) || math.IsNaN(float64(v2)) || math.Abs(float64(v1)-float64(v2)) > eps {
 		t.Fatal(v1, "!=", v2, msg)
 	}
 }
@@ -28,7 +28,7 @@ func AssertNotEqualFloat32(t *testing.T, v1, v2 float32, eps float64, msg ...any
 func AssertEqualFloat64(t *testing.T, v1, v2 float64, eps float64, msg ...any) {
 	t.Helper()
 
-	if math.Abs(v1-v2) > eps {
+	if math.IsNaN(v1) || math.IsNaN(v2) || math.Abs(v1-v2) > eps {
 		t.Fatal(v1, "!=", v2, msg)
 	}
 }

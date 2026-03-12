@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## 0.9
+## 0.10.1
+
+* fix: floats: NaN
+
+## 0.9 = 0.10
 
 * + `AssertRelEqualFloat32()`, `AssertRelNotEqualFloat32()` for relative comparison of float32
 * + `AssertRelEqualFloat64()`, `AssertRelNotEqualFloat64()` for relative comparison of float64
