@@ -1,4 +1,8 @@
-# testy CHANGELOG
+# CHANGELOG
+
+## 0.10.1
+
+* fix: floats: NaN
 
 ## 0.10.0
 
@@ -57,6 +61,6 @@
 
 * Helpers for working with files in tests
 
-## 0.1.0
+## 0.1
 
 * A couple of assert functions to reduce the amount of code in tests
