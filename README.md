@@ -1,16 +1,12 @@
 # testy
 
-Helpers for reducing the amount of code in tests
+**testy** is a lightweight Go testing library designed to simplify
+testing workflow and change how you think about assertions.
 
-## Example
+## Main ideas
 
-```
-import (
-    "github.com/aleneus/testy"
-    "testing"
-)
-
-func TestSomething(t *testing.T) {
-    testy.AssertEqual(t, 2*2, 4)
-}
-```
+* When writing tests in Go, focus on **"how it should be"** rather
+  than **"how it should not be."**
+* The library provides only a core set of basic assertions. More
+  complex assertions should be built within your own projects to
+  accurately reflect your specific domain logic.
