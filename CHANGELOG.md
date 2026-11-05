@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.11.0
+
+* + `Call()`.
+* + `CallErr()`.
+* + `Apply()`.
+* + `ApplyErr()`.
+
 ## 0.10.1
 
 * fix: floats: NaN
